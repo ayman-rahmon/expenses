@@ -52,11 +52,14 @@ const ExpenseForm = (props) => {
     setEnteredTitle('');
     setEnteredAmount('');
     setEnteredDate('');
+    props.onHideAddition() ;
+
+
   };
 
   const cancelButtonHandler = () => {
     // cancel button pressed...
-    props.onAdditionCancelled() ;
+    props.onHideAddition() ;
   }
 
   return (

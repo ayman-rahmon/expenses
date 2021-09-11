@@ -18,7 +18,7 @@ const NewExpense = (props) => {
     setHidden(!hidden) ;
   }
 
-  const cancelAdditionHandler = ()=>{
+  const hideAdditionHandler = ()=>{
     setHidden(!hidden);
     console.log('cancel addition...');
   }
@@ -34,7 +34,7 @@ const NewExpense = (props) => {
 
   return (
     <div className='new-expense'>
-      <ExpenseForm onSaveExpenseData={saveExpenseDataHandler} onAdditionCancelled={cancelAdditionHandler}/>
+      <ExpenseForm onSaveExpenseData={saveExpenseDataHandler} onHideAddition={hideAdditionHandler}/>
     </div>
   );
 };

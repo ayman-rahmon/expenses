@@ -5,6 +5,8 @@ import ExpenseFilter from './ExpenseFilter';
 import React , {useState} from 'react';
 import ExpensesList from './ExpensesList';
 
+import ExpensesChart from './ExpensesChart';
+
 const Expenses = (props) => {
 
   const [currentDate , setCurrentDate] = useState('') ; 
@@ -23,6 +25,7 @@ const Expenses = (props) => {
     <div>
       <Card className="expenses">
         <ExpenseFilter value={currentDate} onFilteredHandler={FilteredHandler}/>
+        <ExpensesChart expenses={filteredExpenses}/>
         <ExpensesList items={filteredExpenses} />
         {/* {  filteredExpenses.length === 0  ? (<p> nNo Expenses found.</p>) : (filteredExpenses.map(item => <ExpenseItem key={item.id} title={item.title} amount={item.amount} date={item.date}/>)) } */}        
       </Card>
